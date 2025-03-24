@@ -1,7 +1,7 @@
 # FormsDemo
 
 ## Mô Tả
-Dự án này là một demo đơn giản về cách sử dụng Pipes trong Angular để hiểu rõ hơn về hoạt động của Pipes đối với các phần tử HTML.
+Dự án này là một demo đơn giản về cách sử dụng Forms trong Angular để nhập thông tin và hiển thị trên giao diện.
 
 ## Các Tính Năng
 - Nhập thông tin vào input và hiển thị ra giao diện.

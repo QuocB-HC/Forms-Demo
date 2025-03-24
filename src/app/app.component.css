@@ -1,0 +1,30 @@
+.container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    background-color: bisque;
+    font-size: 50px;
+    font-weight: bold;
+    color: brown;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.box {
+    border-bottom: 2px solid black;
+    width: 600px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.content {
+    text-align: start;
+    padding: 20px 100px 20px 100px;
+}

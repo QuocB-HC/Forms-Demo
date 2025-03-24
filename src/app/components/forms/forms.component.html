@@ -1,0 +1,12 @@
+<div>
+    <h3>Cơ bản</h3>
+
+    <p>User Name: {{ userName }}</p>
+    <p>Favorite Music: {{ favoriteMusic }}</p>
+
+    <label for="music">
+        <p>My Favorite Music: </p>
+    </label>
+    <input type="text" id="music" [(ngModel)]="favoriteMusic" placeholder="Your favorite music ?">
+    <!-- <button (click)="showForms()">Enter</button> -->
+</div>

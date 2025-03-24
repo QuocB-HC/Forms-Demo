@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EvenNumberDirective } from './directives/even-number.directive';
+import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormsComponent
+    FormsComponent,
+    EvenNumberDirective,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,

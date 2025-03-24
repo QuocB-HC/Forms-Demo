@@ -12,6 +12,8 @@ export class FormsComponent {
   user = {
     name: '',
     email: '',
+    age: 0,
+    even: 0,
   }
 
   // Nhập Favorite Music bằng prompt

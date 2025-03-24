@@ -28,10 +28,27 @@
             <br />
 
             <label>Email:</label>
-            <input type="email" name="email" [(ngModel)]="user.email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" #email="ngModel" />
+            <input type="email" name="email" [(ngModel)]="user.email" required email #email="ngModel" />
             <div *ngIf="email.invalid && email.touched" style="color: red;">
                 <p *ngIf="email.errors?.['required']">Email không được để trống!</p>
-                <p *ngIf="email.errors?.['pattern']">Email không hợp lệ!</p>
+                <p *ngIf="email.errors?.['email']">Email không hợp lệ!</p>
+            </div>
+
+            <br />
+
+            <label>Age:</label>
+            <input type="number" name="age" [(ngModel)]="user.age" required pattern="^[0-9]+$" #age="ngModel" />
+            <div *ngIf="age.invalid && age.touched" style="color: red;">
+                <p *ngIf="age.errors?.['required']">Age không được để trống!</p>
+                <p *ngIf="age.errors?.['pattern']">Age phải là số nguyên dương!</p>
+            </div>
+
+            <br />
+
+            <label>Even Number:</label>
+            <input type="number" name="even" [(ngModel)]="user.even" appEvenNumber  #even="ngModel" />
+            <div *ngIf="even.invalid && even.touched" style="color: red;">
+                <p *ngIf="even.errors?.['notEven']">Số nhập vào phải là số chẵn!</p>
             </div>
 
             <br />
@@ -45,4 +62,8 @@
             <p>Email: {{ user.email }}</p>
         </div>
     </div>
+</div>
+
+<div>
+    
 </div>

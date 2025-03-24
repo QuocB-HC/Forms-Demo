@@ -1,0 +1,23 @@
+<div>
+    <form [formGroup]="profileForm" (submit)="handleSubmit()" style="text-align: center;">
+        <label>
+            Name
+            <input type="text" formControlName="name" />
+        </label>
+
+        <br>
+
+        <label>
+            Email
+            <input type="email" formControlName="email" />
+        </label>
+
+        <br>
+
+        <button type="submit">submit</button>
+    </form>
+
+    <h3>Profile</h3>
+    <p>Name: {{ profileForm.value.name }}</p>
+    <p>Email: {{ profileForm.value.email }}</p>
+</div>

@@ -10,3 +10,39 @@
     <input type="text" id="music" [(ngModel)]="favoriteMusic" placeholder="Your favorite music ?">
     <!-- <button (click)="showForms()">Enter</button> -->
 </div>
+
+<div>
+    <h3>Có Validation</h3>
+
+    <div style="text-align: center;">
+        <h2>Đăng ký tài khoản</h2>
+
+        <form #f="ngForm" (ngSubmit)="submitForm()">
+            <label>Họ và tên:</label>
+            <input type="text" name="name" [(ngModel)]="user.name" required minlength="3" maxlength="8" #name="ngModel" />
+            <div *ngIf="name.invalid && name.touched" style="color: red;">
+                <p *ngIf="name.errors?.['required']">Tên không được để trống!</p>
+                <p *ngIf="name.errors?.['minlength']">Tên ít nhất 3 ký tự!</p>
+            </div>
+
+            <br />
+
+            <label>Email:</label>
+            <input type="email" name="email" [(ngModel)]="user.email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" #email="ngModel" />
+            <div *ngIf="email.invalid && email.touched" style="color: red;">
+                <p *ngIf="email.errors?.['required']">Email không được để trống!</p>
+                <p *ngIf="email.errors?.['pattern']">Email không hợp lệ!</p>
+            </div>
+
+            <br />
+
+            <!-- Nút Submit -->
+            <button type="submit" [disabled]="f.invalid">Gửi</button>
+        </form>
+
+        <div>
+            <p>Name: {{ user.name }}</p>
+            <p>Email: {{ user.email }}</p>
+        </div>
+    </div>
+</div>
